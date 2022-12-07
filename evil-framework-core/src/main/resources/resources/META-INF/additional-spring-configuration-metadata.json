@@ -1,0 +1,16 @@
+{
+  "properties": [
+    {
+      "name": "framework.async.enable",
+      "type": "java.lang.Boolean",
+      "description": "是否定制化异步线程池",
+      "defaultValue":  "false"
+    },
+    {
+      "name": "framework.async.event-publish.enable",
+      "type": "java.lang.Boolean",
+      "description": "是否异步发送事件",
+      "defaultValue": "false"
+    }
+  ]
+}

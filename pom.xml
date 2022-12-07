@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.9.RELEASE</version>
+    </parent>
+    <groupId>com.evil</groupId>
+    <artifactId>evil-framework</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>evil-framework</name>
+    <description>evil-framework</description>
+    <modules>
+        <module>evil-framework-bean</module>
+        <module>evil-framework-core</module>
+        <module>evil-framework-web</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <springfox.version>2.8.0</springfox.version>
+        <swagger.version>1.5.20</swagger.version>
+        <apm-toolkit-trace.version>8.7.0</apm-toolkit-trace.version>
+        <spring-framework-bom.version>5.0.13.RELEASE</spring-framework-bom.version>
+        <apollo.version>1.7.0</apollo.version>
+        <dingtalk-robot.version>1.5.9.RELEASE</dingtalk-robot.version>
+        <commons-io.version>2.6</commons-io.version>
+        <fastjson.version>1.2.58</fastjson.version>
+        <dubbo-starter.version>0.2.1.RELEASE</dubbo-starter.version>
+        <dubbo.version>2.6.5</dubbo.version>
+    </properties>
+    <dependencies>
+        <!-- 会自动引入，子项目可以从这里继承 -->
+    </dependencies>
+    <dependencyManagement>
+        <!-- 不会自动引入，只是声明，子项目需要主动依赖，不会从这里继承 -->
+        <dependencies>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-bean-validators</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-models</artifactId>
+                <version>${swagger.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.skywalking</groupId>
+                <artifactId>apm-toolkit-trace</artifactId>
+                <version>${apm-toolkit-trace.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.evil</groupId>
+                <artifactId>evil-framework-bean</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.evil</groupId>
+                <artifactId>evil-framework-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring-framework-bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.ctrip.framework.apollo</groupId>
+                <artifactId>apollo-client</artifactId>
+                <version>${apollo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.project.dingtalk.robot</groupId>
+                <artifactId>spring-boot-dingtalk-robot-starter</artifactId>
+                <version>${dingtalk-robot.version}</version>
+            </dependency>
+            <!-- spring cloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.SR3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <!-- alibaba -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo-dependencies-bom</artifactId>
+                <version>${dubbo.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+
+        </plugins>
+    </build>
+
+</project>
